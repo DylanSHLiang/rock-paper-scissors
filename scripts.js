@@ -74,11 +74,22 @@ function game(input) {
     displayChoices(player, 0);
     displayChoices(computer, 1);
     message.innerText = playRound(player, computer);
+    options.forEach(element => {
+        element.style["pointer-events"] = "auto"; 
+    });
+    reset.style["pointer-events"] = "auto";
 }
 
 options.forEach(element => {
     element.addEventListener("click", event => {
-        game(event.target);
+        outcomes[0].querySelector("img").src = "./images/rock.png";
+        outcomes[1].querySelector("img").src = "./images/rock.png";
+        message.innerText = "Who's to win?";
+        options.forEach(element => {
+            element.style["pointer-events"] = "none"; 
+        });
+        reset.style["pointer-events"] = "none";
+        setTimeout(game, 1000, event.target);
     });
 });
 
@@ -88,4 +99,5 @@ reset.addEventListener("click", event => {
     });
     scores[0].innerText = 0;
     scores[1].innerText = 0;
+    message.innerText = "First to Five!";
 })

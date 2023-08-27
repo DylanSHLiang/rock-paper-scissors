@@ -1,0 +1,88 @@
+body {
+    font-family: 'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-color: rgb(185, 185, 185);
+}
+
+.container {
+    width: 500px;
+    height: 550px;
+    border: 1px solid rgb(206, 206, 206);
+    box-shadow: 0px 0px 10px rgb(99, 99, 99);
+    border-radius: 30px;
+    margin: 100px  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.outcome {
+    display: flex;
+    justify-content: space-between;
+}
+
+.outcome div {
+    margin: 0 50px;
+    text-align: center;
+}
+
+.outcome img {
+    margin: 30px 0 20px;
+    height: 120px;
+}
+
+.user img {
+    transform: scaleX(-1);
+}
+
+img {
+    height: 80px;
+    width: auto;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 30px;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.choice {
+    margin: 0 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    box-shadow: 0px 0px 10px rgb(206, 206, 206);
+    padding: 10px;
+}
+
+.choice:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+.choice:active {
+    background-color: rgb(180, 180, 180);
+}
+
+button {
+    background-color: rgb(116, 170, 156);
+    border: 2px solid rgb(56, 110, 96);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(100, 154, 140);
+}
+
+button:active {
+    background-color: rgb(56, 110, 96);
+}

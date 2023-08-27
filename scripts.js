@@ -74,6 +74,8 @@ function game(input) {
     displayChoices(player, 0);
     displayChoices(computer, 1);
     message.innerText = playRound(player, computer);
+    outcomes[0].classList.remove("active");
+    outcomes[1].classList.remove("active");
     options.forEach(element => {
         element.style["pointer-events"] = "auto"; 
     });
@@ -83,7 +85,9 @@ function game(input) {
 options.forEach(element => {
     element.addEventListener("click", event => {
         outcomes[0].querySelector("img").src = "./images/rock.png";
+        outcomes[0].classList.add("active");
         outcomes[1].querySelector("img").src = "./images/rock.png";
+        outcomes[1].classList.add("active");
         message.innerText = "Who's to win?";
         options.forEach(element => {
             element.style["pointer-events"] = "none"; 

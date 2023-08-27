@@ -39,6 +39,18 @@ body {
 img {
     height: 80px;
     width: auto;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.user.active img {
+    transform: rotate(20deg);
+}
+
+.comp.active img {
+    transform: scaleX(-1) rotate(20deg);
 }
 
 h1 {
@@ -62,10 +74,6 @@ h1 {
 
 .choice:hover {
     background-color: rgb(202, 202, 202);
-}
-
-.choice:active {
-    background-color: rgb(180, 180, 180);
 }
 
 button {

@@ -38,13 +38,13 @@ function playRound(player, computer) {
     if (scores[0].innerText == 5) {
         options.forEach(element => {
             element.style["pointer-events"] = "none"; 
-        })
+        });
         return "You Win the Game!";
     }
     if (scores[1].innerText == 5) {
         options.forEach(element => {
             element.style["pointer-events"] = "none"; 
-        })
+        });
         return "You Lose the Game!";
     }
     return result
@@ -82,6 +82,10 @@ options.forEach(element => {
     });
 });
 
-
-
-
+reset.addEventListener("click", event => {
+    options.forEach(element => {
+        element.style["pointer-events"] = "auto"; 
+    });
+    scores[0].innerText = 0;
+    scores[1].innerText = 0;
+})
